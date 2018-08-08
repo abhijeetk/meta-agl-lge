@@ -12,7 +12,9 @@ PR="r0"
 PROVIDES += "virtual/webruntime"
 RPROVIDES_${PN} += "virtual/webruntime"
 
-SRC_URI = "git://github.com/Igalia/webosose-${PN}.git;branch=@1.agl;protocol=https"
+inherit externalsrc
+EXTERNALSRC = "/home/abhijeetk/Desktop/webosose-wam"
+#EXTERNALSRC_BUILD = "/home/abhijeetk/Desktop/webosose-wam/out/Release"
 S = "${WORKDIR}/git"
 SRCREV = "${AUTOREV}"
 
